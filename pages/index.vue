@@ -13,7 +13,7 @@
             ></v-text-field>
           </v-form>
           <h2>The search engine that plants trees.</h2>
-          <h1>146,000,811</h1>
+          <h1><Counter/></h1>
           <p>Trees planted by Ecosia users.</p>
         </v-col>
         <v-col cols="col-4"></v-col>
@@ -103,7 +103,7 @@
                 <h1 class="title uppercase">Trees planted by ecosia users</h1>
               </div>
               <div>
-                <h3 class="counter">146001425</h3>
+                <h1><Counter/></h1>
               </div>
             </v-col>
           </v-row>
@@ -334,6 +334,8 @@ $teal: teal;
 }
 
 .join-us-section {
+  background-color: $alice-blue;
+
   .join-us-container {
     display: flex;
     height: 15vh;

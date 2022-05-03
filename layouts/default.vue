@@ -44,6 +44,7 @@
     <v-main>
       <Nuxt />
     </v-main>
+    <Links />
     <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
       <v-list>
         <v-list-item @click.native="right = !right">
@@ -73,11 +74,6 @@ export default {
           icon: 'mdi-apps',
           title: 'Home',
           to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'About us',
-          to: '/about-us',
         },
       ],
       miniVariant: false,
