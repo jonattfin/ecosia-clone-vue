@@ -1,10 +1,9 @@
 <template>
   <section class="links-section">
-      <v-container>
     <v-row>
       <v-col cols="col-4" />
       <v-col cols="col-4">
-        <v-row>
+        <v-row class="links-container">
           <v-col cols="col-4">
             <div>SITEMAP</div>
             <div>News</div>
@@ -29,24 +28,20 @@
       </v-col>
       <v-col cols="col-4" />
     </v-row>
-    </v-container>
   </section>
 </template>
 
 <script>
-export default {
-  data() {},
-  mounted() {},
-  unmounted() {},
-  methods: {},
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
 .links-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20vh;
+  .links-container {
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+  }
 }
 </style>

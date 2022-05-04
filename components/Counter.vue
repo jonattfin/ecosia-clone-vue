@@ -9,7 +9,6 @@ export default {
       counter: 146 * Math.pow(10, 6),
     }
   },
-  methods: {},
   mounted() {
     this.counterInterval = setInterval(() => {
       this.counter++

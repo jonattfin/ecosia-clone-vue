@@ -9,11 +9,12 @@
             <v-text-field
               class="search-input"
               label="Search the web to plant trees..."
+              append-icon="mdi-card-search"
               solo
             ></v-text-field>
           </v-form>
           <h2>The search engine that plants trees.</h2>
-          <h1><Counter/></h1>
+          <h1><Counter /></h1>
           <p>Trees planted by Ecosia users.</p>
         </v-col>
         <v-col cols="col-4"></v-col>
@@ -103,7 +104,7 @@
                 <h1 class="title uppercase">Trees planted by ecosia users</h1>
               </div>
               <div>
-                <h1><Counter/></h1>
+                <h1><Counter /></h1>
               </div>
             </v-col>
           </v-row>
@@ -126,7 +127,10 @@
             </v-col>
           </v-row>
           <v-row class="link-container">
-            <a href="#">Discover our projects</a>
+            <a href="#"
+              >Discover our projects
+              <v-icon>mdi-chevron-double-right</v-icon></a
+            >
           </v-row>
         </v-col>
         <v-col cols="col-4"></v-col>
@@ -155,7 +159,10 @@
             </v-col>
           </v-row>
           <v-row class="link-container">
-            <a href="#">Explore our financial reports</a>
+            <a href="#"
+              >Explore our financial reports
+              <v-icon>mdi-chevron-double-right</v-icon></a
+            >
           </v-row>
         </v-col>
         <v-col cols="col-4"></v-col>
@@ -228,7 +235,9 @@
             </v-col>
           </v-row>
           <v-row class="link-container">
-            <a href="#">Other reasons</a>
+            <a href="#"
+              >Other reasons <v-icon>mdi-chevron-double-right</v-icon></a
+            >
           </v-row>
         </v-col>
         <v-col cols="col-4"></v-col>
@@ -269,10 +278,6 @@ $teal: teal;
   border-left: 5px solid $teal;
 }
 
-.alice-blue {
-  background-color: $alice-blue;
-}
-
 .link-container {
   display: flex;
   height: 5vh;
@@ -302,6 +307,12 @@ $teal: teal;
     height: 40vh;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (max-width: 2700px) {
+    .countries-container {
+      height: 100vh;
+    }
   }
 }
 
