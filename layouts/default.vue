@@ -58,14 +58,14 @@ export default {
     selectedItem: 0,
     items: [
       { text: 'Home', icon: 'mdi-folder', url: '' },
-      {
-        text: 'How Ecosia works',
-        icon: 'mdi-account-multiple',
-        url: 'how-it-works',
-      },
       { text: 'About us', icon: 'mdi-star', url: 'about-us' },
-      { text: 'Mobile', icon: 'mdi-history', url: 'mobile' },
-      { text: 'Privacy', icon: 'mdi-check-circle', url: 'privacy' },
+      // {
+      //   text: 'How Ecosia works',
+      //   icon: 'mdi-account-multiple',
+      //   url: 'how-it-works',
+      // },
+      // { text: 'Mobile', icon: 'mdi-history', url: 'mobile' },
+      // { text: 'Privacy', icon: 'mdi-check-circle', url: 'privacy' },
     ],
   }),
   methods: {

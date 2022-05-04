@@ -263,15 +263,15 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      query: 'go with the flow',
+      query: '',
     }
   },
   methods: {
     doSearch(ev) {
-      ev.preventDefault();
-      console.log(ev.target.value);
-    }
-  }
+      ev.preventDefault()
+      console.log(ev.target.value)
+    },
+  },
 }
 </script>
 
