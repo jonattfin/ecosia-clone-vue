@@ -1,7 +1,31 @@
 <template>
   <v-app dark>
-    <v-app-bar>
-      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+    <v-app-bar dark>
+      <v-menu>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn dark icon v-bind="attrs" v-on="on">
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list nav dense on>
+          <v-list-item-group v-model="selectedItem" color="primary">
+            <v-list-item
+              v-for="(item, i) in items"
+              :key="i"
+              @click="navigate(item.url)"
+            >
+              <v-list-item-icon>
+                <v-icon v-text="item.icon"></v-icon>
+              </v-list-item-icon>
+
+              <v-list-item-content>
+                <v-list-item-title v-text="item.text"></v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+      </v-menu>
 
       <v-toolbar-title>Ecosia</v-toolbar-title>
     </v-app-bar>
@@ -31,7 +55,24 @@ export default {
   data: () => ({
     drawer: false,
     group: null,
+    selectedItem: 0,
+    items: [
+      { text: 'Home', icon: 'mdi-folder', url: '' },
+      {
+        text: 'How Ecosia works',
+        icon: 'mdi-account-multiple',
+        url: 'how-it-works',
+      },
+      { text: 'About us', icon: 'mdi-star', url: 'about-us' },
+      { text: 'Mobile', icon: 'mdi-history', url: 'mobile' },
+      { text: 'Privacy', icon: 'mdi-check-circle', url: 'privacy' },
+    ],
   }),
+  methods: {
+    navigate(url) {
+      this.$router.push(`/${url}`)
+    },
+  },
 }
 </script>
 

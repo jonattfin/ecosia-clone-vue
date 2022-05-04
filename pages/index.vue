@@ -4,13 +4,15 @@
       <v-row>
         <v-col cols="col-4"></v-col>
         <v-col cols="col-4" class="search-engine-container">
-          <img src="~/assets/home/logo.png" />
+          <img src="~/assets/images/home/logo.png" />
           <v-form>
             <v-text-field
               class="search-input"
               label="Search the web to plant trees..."
               append-icon="mdi-card-search"
+              v-model="query"
               solo
+              @keydown.enter="doSearch"
             ></v-text-field>
           </v-form>
           <h2>The search engine that plants trees.</h2>
@@ -41,7 +43,7 @@
               <v-col cols="col-4">
                 <v-row>
                   <v-col>
-                    <img src="~/assets/home/brazil.webp" />
+                    <img src="~/assets/images/home/brazil.webp" />
                   </v-col>
                 </v-row>
                 <v-row>
@@ -57,7 +59,7 @@
               <v-col cols="col-4">
                 <v-row>
                   <v-col>
-                    <img src="~/assets/home/burkinafaso.webp" />
+                    <img src="~/assets/images/home/burkinafaso.webp" />
                   </v-col>
                 </v-row>
                 <v-row>
@@ -73,7 +75,7 @@
               <v-col cols="col-4">
                 <v-row>
                   <v-col>
-                    <img src="~/assets/home/indonesia.webp" />
+                    <img src="~/assets/images/home/indonesia.webp" />
                   </v-col>
                 </v-row>
                 <v-row>
@@ -184,7 +186,7 @@
           </v-row>
           <v-row>
             <v-col cols="col-2">
-              <img src="~/assets/home/profits.svg" />
+              <img src="~/assets/images/home/profits.svg" />
             </v-col>
             <v-col cols="col-4">
               <div class="content">
@@ -196,7 +198,7 @@
               </div>
             </v-col>
             <v-col cols="col-2">
-              <img src="~/assets/home/privacy.svg" />
+              <img src="~/assets/images/home/privacy.svg" />
             </v-col>
             <v-col cols="col-4">
               <div class="content">
@@ -210,7 +212,7 @@
           </v-row>
           <v-row>
             <v-col cols="col-2">
-              <img src="~/assets/home/world.svg" />
+              <img src="~/assets/images/home/world.svg" />
             </v-col>
             <v-col>
               <div class="content">
@@ -222,7 +224,7 @@
               </div>
             </v-col>
             <v-col cols="col-2">
-              <img src="~/assets/home/coin.svg" />
+              <img src="~/assets/images/home/coin.svg" />
             </v-col>
             <v-col cols="col-4">
               <div class="content">
@@ -259,6 +261,17 @@
 <script>
 export default {
   name: 'IndexPage',
+  data() {
+    return {
+      query: 'go with the flow',
+    }
+  },
+  methods: {
+    doSearch(ev) {
+      ev.preventDefault();
+      console.log(ev.target.value);
+    }
+  }
 }
 </script>
 
